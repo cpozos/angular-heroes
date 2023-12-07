@@ -24,6 +24,10 @@ const routes: Routes = [
         component: SearchPageComponent
       },
       {
+        path: 'edit/:id',
+        component: NewPageComponent
+      },
+      {
         path: ':id',
         component: HeroPageComponent
       },
