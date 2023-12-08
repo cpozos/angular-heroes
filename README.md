@@ -17,6 +17,6 @@ This project is using
 1. Clone this repo
 2. Update dependencies ```npm i```
 3. Initialize backend ```npm run backend```
-4. Run app ```npm run start```
+4. Run app ```npm run dev```
 
 ## Code scaffolding
