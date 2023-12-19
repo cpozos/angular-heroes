@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     AuthRoutingModule
   ]
 })
