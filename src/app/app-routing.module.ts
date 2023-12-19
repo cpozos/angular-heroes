@@ -6,6 +6,10 @@ import { PublicGuard } from './auth/guards/public.guard';
 
 const routes: Routes = [
   {
+    path: 'forms',
+    loadChildren: () => import('./reactive-forms/forms.module').then(m => m.FormsModule),
+  },
+  {
     path: 'login',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
     canActivate: [PublicGuard],
