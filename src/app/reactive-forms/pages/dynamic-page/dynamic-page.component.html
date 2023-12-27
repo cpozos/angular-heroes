@@ -1,56 +1,63 @@
 <h2>Dynamic</h2>
 <hr>
 
-<form autocomplete="off">
+<form autocomplete="off" [formGroup]="reactiveForm" (ngSubmit)="onSave()">
 
-    <!-- Nombre -->
+    <!-- Name -->
     <div class="mb-3 row">
-        <label class="col-sm-3 col-form-label">Nombre</label>
+        <label class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-9">
-            <input class="form-control"
-                   placeholder="Nombre de la persona">
-            <span class="form-text text-danger">
-                   error message
+            <input
+              formControlName="name"
+              class="form-control"
+              placeholder="Person Name">
+            <span *ngIf="isNotValidField('name')" class="form-text text-danger">
+              {{ getFieldError('name') }}
             </span>
         </div>
     </div>
 
-    <!-- Agregar Favorito -->
+    <!-- Add Fav -->
     <div class="mb-3 row">
-        <label class="col-sm-3 col-form-label">Agregar</label>
+        <label class="col-sm-3 col-form-label">Add</label>
         <div class="col-sm-9">
 
             <div class="input-group">
-                <input class="form-control"
-                       placeholder="Agregar favorito">
+                <input
+                    (keydown)="onKeyDown($event)"
+                    [formControl]="newFavControl"
+                    class="form-control"
+                    placeholder="Add fav">
 
-
-                <button class="btn btn-outline-primary"
-                        type="button">
-                    Agregar favorito
+                <button
+                  (click)="onAddFav()"
+                  class="btn btn-outline-primary"
+                  type="button">
+                    Add fav
                 </button>
             </div>
         </div>
     </div>
 
 
-    <!-- Lista de Juegos Favoritos -->
+    <!-- Fav games list -->
     <div class="mb-3 row">
-        <label class="col-sm-3 col-form-label">Favoritos</label>
-        <div class="col-sm-9">
+        <label class="col-sm-3 col-form-label">Favs</label>
+        <div class="col-sm-9" formArrayName="favGames">
 
-            <div class="mb-1">
+            <div class="mb-1" *ngFor="let fav of favGamesControl.controls; let i = index">
 
                 <div class="input-group">
-                    <input class="form-control">
+                    <input [formControlName]="i" class="form-control">
 
                     <button class="btn btn-outline-danger"
-                            type="button">
-                      Eliminar
+                            type="button"
+                            (click)="onDeleteFav(i)">
+                      Delete
                   </button>
                 </div>
-                <span class="form-text text-danger">
-                   Este campo es requerido
+                <span *ngIf="isNotValid(favGamesControl, i)" class="form-text text-danger">
+                  This field is required
                 </span>
 
             </div>
@@ -66,7 +73,7 @@
                     class="btn btn-primary float-end"
                     >
                     <!-- [disabled]="myForm.invalid" -->
-                Guardar
+                Save
             </button>
         </div>
     </div>
@@ -84,6 +91,6 @@
 <pre>{{ 'object' | json }}</pre>
 <br>
 
-<span>Agregar Juego</span>
+<span>Add game</span>
 <pre>{{ 'object' | json }}</pre>
 <pre>{{ 'object' | json }}</pre>
