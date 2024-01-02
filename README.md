@@ -16,7 +16,14 @@ This project is using
 
 1. Clone this repo
 2. Update dependencies ```npm i```
-3. Initialize backend ```npm run backend```
-4. Run app ```npm run dev```
 
-## Code scaffolding
+### HEROES
+
+3. Comment & comment out the import styles required by HEROES app in styles.css file
+4. Run backend ```npm run backend```
+5. Run Angular app ```npm run dev```
+
+### FORMS
+
+3. Comment & comment out the import styles required by FORMS in styles.css file
+4. Run Angular app ```npm run dev```
