@@ -5,6 +5,7 @@ import { FormsDynamicPageComponent } from "./pages/dynamic-page/dynamic-page.com
 import { FormsSwitchesPageComponent } from "./pages/switches-page/switches-page.component";
 import { FormsRegisterPageComponent } from "./pages/register-page/register-page.component";
 import { FormsLayoutPageComponent } from "./pages/layout-page/layout-page.component";
+import { FormsSelectorsPageComponent } from "./pages/selectors-page/selectors-page.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'basic', component: FormsBasicPageComponent },
       { path: 'dynamic', component: FormsDynamicPageComponent },
       { path: 'switches', component: FormsSwitchesPageComponent },
+      { path: 'selectors', component: FormsSelectorsPageComponent },
       { path: '**', redirectTo: 'login' }
     ]
   }

@@ -13,7 +13,8 @@ export class SideMenuComponent {
   public reactiveMenu: MenuItem[] = [
     { title: 'Basic', route: '/forms/basic' },
     { title: 'Dynamic', route: '/forms/dynamic' },
-    { title: 'Switches', route:'/forms/switches' },
+    { title: 'Switches', route: '/forms/switches' },
+    { title: 'Selectors', route:'/forms/selectors' },
   ];
 
   public authMenu: MenuItem[] = [
