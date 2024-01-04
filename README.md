@@ -12,6 +12,11 @@ This project is using
 ### For development
 - [Json server](https://www.npmjs.com/package/json-server)
 
+## Environments
+
+1. Copy .env.template file's data and paste in .env (create it if it does not exist)
+2. Assign the desired environment values.
+
 ## Development
 
 1. Clone this repo
