@@ -39,3 +39,9 @@ This project is using
 3. Comment & comment out the import styles required by FORMS in styles.css file
 4. Run Angular app ```npm run dev```
 5. Go to {domain}/maps route
+
+#### Notes
+
+1. Install the package `npm i --save-dev @types/mapbox-gl`
+2. Add the css
+3. Create the map using the token in the component
