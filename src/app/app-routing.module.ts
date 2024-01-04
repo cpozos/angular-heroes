@@ -10,6 +10,10 @@ const routes: Routes = [
     loadChildren: () => import('./reactive-forms/forms.module').then(m => m.FormsModule),
   },
   {
+    path: 'maps',
+    loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule),
+  },
+  {
     path: 'login',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
     canActivate: [PublicGuard],

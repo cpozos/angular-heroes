@@ -27,3 +27,10 @@ This project is using
 
 3. Comment & comment out the import styles required by FORMS in styles.css file
 4. Run Angular app ```npm run dev```
+5. Go to {domain}/forms route
+
+### MAPS
+
+3. Comment & comment out the import styles required by FORMS in styles.css file
+4. Run Angular app ```npm run dev```
+5. Go to {domain}/maps route
