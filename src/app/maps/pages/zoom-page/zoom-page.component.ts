@@ -14,7 +14,7 @@ export class ZoomPageComponent implements AfterViewInit, OnDestroy {
 
   map?: Map;
   public currentZoomValue: number = 5;
-  public currentCenter: LngLat = new LngLat(-70, 40);
+  public currentCenter: LngLat = new LngLat(-99,19);
 
   ngAfterViewInit(): void {
     this.map = new Map({
@@ -34,7 +34,7 @@ export class ZoomPageComponent implements AfterViewInit, OnDestroy {
       this.map!.setZoom(18);
     });
 
-    this.map.on('moveend', (ev) => {
+    this.map.on('move', (ev) => {
       this.currentCenter = this.map!.getCenter();
     });
   }
